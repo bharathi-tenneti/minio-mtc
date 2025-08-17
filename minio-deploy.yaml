@@ -1,5 +1,11 @@
 ---
 apiVersion: v1
+kind: Namespace
+metadata:
+  name: minio
+
+---
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: minio-pvc
@@ -64,7 +70,9 @@ spec:
       targetPort: 9000
     - name: console
       port: 9001
-      targetPort: 9001apiVersion: route.openshift.io/v1
+      targetPort: 9001
+---
+apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: minio-route
@@ -83,7 +91,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: minio-s3-route
-  namespace: minio-replication-repo
+  namespace: minio
 spec:
   to:
     kind: Service
