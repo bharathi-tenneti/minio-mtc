@@ -1,0 +1,8 @@
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: mtc-obc
+  namespace: openshift-migration
+spec:
+  bucketName: mtc-repo-bucket
+  storageClassName: openshift-storage.noobaa.io
