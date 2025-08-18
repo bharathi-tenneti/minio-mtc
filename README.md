@@ -23,7 +23,7 @@ minio-s3-route   minio-s3-route-minio.apps.cluster1.sandbox1882.opentlc.com     
 ```
 Use the "minio-route" to access MinIO web UI, and create a bucket with any arbitrary name. You can use "minioadmin" for creds temporarily.
 
-[!image](images/minio.png)
+(images/minio.png)
 
 
 # Usecase 2: Create bucket using ODF Nooba Storage class
