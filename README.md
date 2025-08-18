@@ -62,12 +62,12 @@ spec:
   exposedRegistryPath: <your-host-registry-route-from-above>
 ```
 
-[!image](images/mtc-clusters.png)
+[!images](images/mtc-clusters.png)
 
 # Configure MTC UI - Create Replication repository.
 Option 1: Pick "S3" option here, if using Minio for bucket , you can use the "minio-s3-route" as the S3 Endpoint, along with "minioadmin" creds as the AWS creds, along with the bucket name you have created using minio UI.
 
-[!image](images/s3-minio-mtc.png)
+[!images](images/s3-minio-mtc.png)
 
 Option 2: Pick "S3" for ODF bucket as well. You can find bucket information from above 
 You can look at the secret and configmap that contains the S3 AWS Access Key, and AWS Secret Access, and S3 Endpoint details. Use S3 route as it should be accessible from the source cluster as well.
@@ -80,7 +80,7 @@ s3            s3-openshift-storage.apps.cluster-j8s6v.j8s6v.sandbox230.opentlc.c
 
 ```
 
-[!image](images/s3-odf-mtc.png)
+[!images](images/s3-odf-mtc.png)
 
 
 # Create migration plan 
