@@ -70,8 +70,10 @@ Option 1: Pick "S3" option here, if using Minio for bucket , you can use the "mi
 [!images](images/s3-minio-mtc.png)
 
 Option 2: Pick "S3" for ODF bucket as well.
-_You can look at the secret and configmap that contains the S3 AWS Access Key, and AWS Secret Access, and S3 Endpoint details. Note : Use S3 route as it should be accessible from the source cluster as well.
-_
+You can look at the secret and configmap that contains the S3 AWS Access Key, and AWS Secret Access, and S3 Endpoint details.
+
+ _Note : Use S3 route as it should be accessible from the source cluster as well._
+
 ```
 $ oc get secrets -n openshift-migration
 $ oc get cm -n openshift-migration
@@ -87,6 +89,7 @@ s3            s3-openshift-storage.apps.cluster-j8s6v.j8s6v.sandbox230.opentlc.c
 # Create migration plan 
 Create migration plans by choosing which projects to move across to target cluster. Keep in mind to have compatible storage classes for  PVCs across clusters. 
 You can "stage" a migration, and the "cutover" applications from source cluster.
+
 _Note: If your moving your apps managed by ArgoCD, do not "Halt" these apps during migration from source cluster, as ArgoCD will constantly try to sync them up._
 
 [!image](images/mtc-plans.png)
